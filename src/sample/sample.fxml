@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<BorderPane fx:id="borderPane" prefHeight="900.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <top>
+      <ToolBar>
+         <HBox alignment="CENTER" spacing="5">
+            <Label text="Brush size" />
+            <TextField fx:id="brushSize" text="18" />
+            <ColorPicker fx:id="colorPicker" />
+            <Label text="Shape" />
+            <ComboBox fx:id="shapes" value="Line" onAction="#drawShape">
+               <items>
+                  <FXCollections fx:factory="observableArrayList">
+                     <String fx:value="Line" />
+                     <String fx:value="Circle" />
+                     <String fx:value="Oval" />
+                     <String fx:value="Rectangle"/>
+                     <String fx:value="Square"/>
+                  </FXCollections>
+               </items>
+            </ComboBox>
+            <CheckBox fx:id="eraser" text="Eraser"/>
+         </HBox>
+      </ToolBar>
+   </top>
+
+   <center>
+      <Canvas fx:id="canvas" width="1200" height="700" />
+   </center>
+
+   <bottom>
+      <MenuBar>
+         <Menu text="File">
+            <MenuItem text="Load" onAction="#load" />
+            <MenuItem text="Save" onAction="#save"/>
+            <MenuItem text="Reset" onAction="#reset" />
+            <MenuItem text="Exit" onAction="#exit"/>
+         </Menu>
+      </MenuBar>
+   </bottom>
+</BorderPane>
