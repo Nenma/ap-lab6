@@ -5,15 +5,16 @@ At the moment, the app contains:
 - A main frame consisting in a BorderPane
 - A configuration panel at the top of the main frame containing:
   - A Label and a TextField for choosing brush size
-  - A ColorPicker for choosing brush color
+  - A Label and a ColorPicker for choosing brush color
   - A Label and a ComboBox for drawing shapes
   - A CheckBox for deciding whether to draw or to erase
 - A canvas in the center of the main frame in which the user can draw respecting the selected configurations among the ones above
-- A control panel at the bottom of the frame with working *Save*, *Reset* and *Exit* options, *Load* is not yet implemented
+- A control panel at the bottom of the frame with working *load*, *Save*, *Undo*, *Reset* and *Exit* options
 
-The app is made using JavaFX and, at the moment, it is only composed of a Main and a Controller class along with a FXML file:
+The app is made using JavaFX and is composed of a Main, Controller and a CustomShape class along with a FXML file:
 - The Main class launches the app window
 - The Controller class handles the user interation and events
+- The CustomShape class is an utility class that facilitates the implementation of the *Undo* option
 - The sample.fxml file models the structure of the main frame
 
 

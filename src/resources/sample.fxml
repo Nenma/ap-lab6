@@ -12,6 +12,7 @@
          <HBox alignment="CENTER" spacing="5">
             <Label text="Brush size" />
             <TextField fx:id="brushSize" text="18" />
+            <Label text="Color" />
             <ColorPicker fx:id="colorPicker" />
             <Label text="Shape" />
             <ComboBox fx:id="shapes" value="Line" onAction="#drawShape">
@@ -31,7 +32,7 @@
    </top>
 
    <center>
-      <Canvas fx:id="canvas" width="1200" height="700" />
+      <Canvas fx:id="canvas" width="1200" height="800" />
    </center>
 
    <bottom>
@@ -39,6 +40,7 @@
          <Menu text="File">
             <MenuItem text="Load" onAction="#load" />
             <MenuItem text="Save" onAction="#save"/>
+            <MenuItem text="Undo" onAction="#undo" />
             <MenuItem text="Reset" onAction="#reset" />
             <MenuItem text="Exit" onAction="#exit"/>
          </Menu>
